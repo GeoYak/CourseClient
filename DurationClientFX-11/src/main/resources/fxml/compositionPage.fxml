@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="program.controllers.CompositionController">
+    <bottom>
+        <TableView fx:id="compositionTableView" maxHeight="500.0" maxWidth="1200.0" prefHeight="500.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="bondNameColumn" maxWidth="462.0" minWidth="100.0" prefWidth="462.0" text="Облигация" />
+                <TableColumn fx:id="bondShareColumn" maxWidth="399.0" minWidth="100.0" prefWidth="199.0" text="Доля облигации" />
+                <TableColumn fx:id="portfolioNameColumn" maxWidth="748.0" minWidth="100.0" prefWidth="538.0" text="Название портфеля" />
+            </columns>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </TableView>
+    </bottom>
+    <top>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button alignment="CENTER" cache="true" contentDisplay="CENTER" layoutX="849.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleDuration" prefHeight="43.0" prefWidth="325.0" stylesheets="@../styles/MainStyle.css" text="Расчитать дюрацию портфеля" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="849.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="searchCompany" layoutX="35.0" layoutY="85.0" prefHeight="42.0" prefWidth="199.0" promptText="Найти портфель" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="500.0" layoutY="25.0" text="Мои портфели" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="25.0">
+                    <font>
+                        <Font name="Chalkboard SE Light" size="30.0" />
+                    </font>
+                </Label>
+                <Button alignment="CENTER" cache="true" contentDisplay="CENTER" layoutX="268.0" layoutY="128.0" mnemonicParsing="false" onAction="#handlerCompositionsBtn" prefHeight="40.0" prefWidth="122.0" stylesheets="@../styles/MainStyle.css" text="Показать" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="268.0" />
+                <Button layoutX="577.0" layoutY="99.0" mnemonicParsing="false" onAction="#handleAddToPortfolio" stylesheets="@../styles/MainStyle.css" text="Добавить" />
+                <Button layoutX="714.0" layoutY="99.0" mnemonicParsing="false" onAction="#handleDeletePortfolio" stylesheets="@../styles/MainStyle.css" text="Удалить" />
+            </children>
+        </AnchorPane>
+    </top>
+</BorderPane>

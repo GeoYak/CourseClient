@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="program.controllers.AboutPageController">
+    <Label layoutX="443.0" layoutY="395.0" text="Якущев Георгий, ЗБ-ПИ21-2" AnchorPane.leftAnchor="443.0" AnchorPane.topAnchor="395.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextArea editable="false" layoutX="146.0" layoutY="152.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="134.0" prefWidth="379.0" text="Приложение может выводить информацию об облигациях, показывает портфель пользователя. Доступна возможность расчета дюрации портфеля. Чтобы воспользоваться функционалом данной программы,  необходимо зарегистрироваться и авторизоваться." wrapText="true" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="152.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextArea>
+    <Label layoutX="300.0" layoutY="38.0" text="Об Авторе" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="20.0">
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER" layoutX="188.0" layoutY="102.0" prefHeight="27.0" prefWidth="281.0" text="О программе" AnchorPane.rightAnchor="181.0" AnchorPane.topAnchor="102.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="438.0" layoutY="360.0" text="Работа выполнена студентом" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="360.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <GridPane layoutX="22.0" layoutY="344.0" prefHeight="71.0" prefWidth="226.0" AnchorPane.topAnchor="344.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="21.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="53.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Hyperlink onAction="#openGithub" text="GitHub" GridPane.columnIndex="1">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Hyperlink>
+        <Hyperlink onAction="#openVk" prefHeight="26.0" prefWidth="76.0" text="VK" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+            <padding>
+                <Insets left="30.0" />
+            </padding>
+        </Hyperlink>
+        <Label text="- аккаунт на Github" GridPane.columnIndex="2">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="- страница Вконтакте" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </GridPane>
+    <Button defaultButton="true" layoutX="286.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="36.0" prefWidth="85.0" stylesheets="@../styles/AuthStyle.css" text="Назад" AnchorPane.bottomAnchor="40.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Button>
+</AnchorPane>

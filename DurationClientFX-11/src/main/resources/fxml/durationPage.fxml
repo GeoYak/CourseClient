@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="program.controllers.DurationPageController">
+    <Label layoutX="165.0" layoutY="28.0" text="Расчет дюрации портфеля" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="28.0">
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Label>
+    <Button defaultButton="true" layoutX="283.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="36.0" prefWidth="85.0" stylesheets="@../styles/AuthStyle.css" text="Назад" AnchorPane.bottomAnchor="14.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Button>
+   <Button defaultButton="true" layoutX="393.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleCalculationBtn" prefHeight="46.0" prefWidth="163.0" stylesheets="@../styles/AuthStyle.css" text="Рассчитать">
+      <font>
+         <Font size="18.0" />
+      </font></Button>
+   <TextField fx:id="searchCompany" layoutX="32.0" layoutY="107.0" prefHeight="46.0" prefWidth="339.0" promptText="Название портфеля(полное название)">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="durationCompany" layoutX="32.0" layoutY="204.0" prefHeight="46.0" prefWidth="277.0" promptText="Дюрация">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </TextField>
+</AnchorPane>

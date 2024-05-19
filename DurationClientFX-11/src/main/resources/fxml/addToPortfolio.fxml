@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="411.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="program.controllers.AddToPortfolioPageController">
+   <TextArea editable="false" layoutX="87.0" layoutY="75.0" prefHeight="49.0" prefWidth="239.0" text="Если название портфеля не найдено, создается новый портфель." wrapText="true" />
+    <Label layoutX="100.0" layoutY="23.0" text="Добавить в портфель" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="23.0">
+        <font>
+            <Font name="Chalkboard" size="20.0" />
+        </font>
+    </Label>
+    <GridPane layoutX="30.0" layoutY="152.0" prefHeight="122.0" prefWidth="340.0" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="152.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="198.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="Название портфеля" />
+        <Label text="Название облигации" GridPane.rowIndex="1" />
+        <Label text="Доля облигации" GridPane.rowIndex="2" />
+
+        <TextField fx:id="portfolio_nameField" GridPane.columnIndex="1" />
+        <TextField fx:id="bond_nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="bond_shareField" promptText="может быть дробным" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+    <HBox layoutX="107.0" layoutY="538.0" prefHeight="31.0" prefWidth="263.0" spacing="50.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAddToPortfolio" prefHeight="31.0" prefWidth="151.0" stylesheets="@../styles/AuthStyle.css" text="Добавить" />
+        <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="31.0" prefWidth="79.0" stylesheets="@../styles/AuthStyle.css" text="Отмена" />
+    </HBox>
+</AnchorPane>
